@@ -1,13 +1,39 @@
 doctype html
 html(lang="en")
   head
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(http-equiv="content-type", content="text/html; charset=UTF-8")
+    meta(http-equiv="content-script-type", content="text/javascript")
+    meta(http-equiv="content-style-type", content="text/css")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="author", content="Max Lysenko")
+    meta(name="description", content="I'm Max Lysenko, front-end developer")
+    meta(name="keywords", content="Maxim Lysenko, CV, Front-End Developer, Web developer, Resume, JavaScript, AngularJS, HTML, HTML5, CSS, CSS3, OOP, Kiev, Ukraine")
+    meta(name="robots", content="index,follow")
     title Max Lysenko | Front-End Developer
     link(rel="stylesheet", href="dest/vendor/font-awesome.min.css")
     link(rel="stylesheet", href="dest/vendor/bootstrap.min.css")
     link(rel="stylesheet", href="dest/css/styles.min.css")
-    
+  body
+    .page-wrap
+      //- header.header
+      //-   .container
+      //-     .row
+      //-       .col-md-3
+      //-         .logo: span MaxLysenko
+      //-       .col-md-6.pull-right
+      //-         nav.nav-bar(role="navigation")
+      //-           ul.nav-list.clearfix
+      //-             li.item: a.nav-link(href="#bio"): span bio
+      //-             li.item: a.nav-link(href="#experience"): span experience
+      //-             li.item: a.nav-link(href="#skills"): span skills & tools
+      //-             li.item: a.nav-link(href="#projects"): span projects
+      //-             li.item: a.nav-link(href="#contact"): span contact
+      section.top
+        .content
+        .overlay
+      section.bio#bio
+    // JavaScript
     script(src="dest/vendor/jquery-1.12.4.min.js")
     script(src="dest/vendor/bootstrap.min.js")
     script(src="dest/js/main.min.js")
-  body
-    div Hello World

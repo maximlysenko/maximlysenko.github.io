@@ -1,2 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Jura)
+
+$border-color: #ccc
+$main-color: #e83d47
+
 body
-  background-color: #fff
+  font-family: 'Jura', sans-serif
+  font-size: 15px
+a
+  color: #333
+  &:hover, &:focus
+    color: #333
+    outline: none
+    text-decoration: none
+
+.header
+  // border-bottom: 1px solid $border-color
+
+.nav-list
+  padding: 0
+  margin: 0
+
+  .item
+    list-style-type: none
+    float: left
+
+.nav-link
+  border-bottom: 2px solid #fff
+  display: block
+  font-weight: bold
+  padding: 20px 25px
+
+  &:hover
+    border-bottom: 2px solid $main-color
+    color: #000
+
+    span
+      transform: translateY(3px)
+
+  span
+    display: block
+    transition: transform .2s ease-in-out
+
+section.top
+  position: relative
+  height: 100vh
+  background: url('../images/bg-img.jpg') no-repeat center fixed
+  background-size: cover
+
+  .overlay
+    position: absolute
+    background: $main-color
+    opacity: .6
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 2
+
+.bio
+  height: 2000px
