@@ -12,7 +12,7 @@ html(lang="en")
     meta(name="robots", content="index,follow")
     title Max Lysenko | Front-End Developer
     link(rel="stylesheet", href="dest/vendor/font-awesome.min.css")
-    link(rel="stylesheet", href="dest/vendor/bootstrap.min.css")
+    link(rel="stylesheet", href="dest/vendor/normalize.css")
     link(rel="stylesheet", href="dest/css/styles.min.css")
   body
     .page-wrap
@@ -41,7 +41,323 @@ html(lang="en")
         .arrow-wrap
           i.fa.fa-angle-down
       section.bio#bio
+        .container-small
+          .title
+            h2 Bio
+          .content
+            .about
+              h2.sub-title About
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis earum quo sed ex, magnam culpa magni, laboriosam minima saepe in voluptas amet nesciunt quas? Quaerat consequatur error laborum excepturi atque.
+            .detailed
+              h2.sub-title Details
+              ul.bio-list
+                li
+                  span.-bold Name:    
+                  span Maxim Lysenko
+                li
+                  span.-bold Age:   
+                  span 21 years old
+                li 
+                  span.-bold Location:    
+                  span Kiev, Ukraine
+              
+      section#experience
+        .container
+          .title: h2 Experience
+          .content
+            .section-edu
+              h2.sub-title Education
+              ul.exp-list
+                li.exp-item
+                  .info
+                    .name
+                      span.-bold National Aviation University
+                      span
+                        i.fa.fa-map-marker  
+                        span.location Kiev, Ukraine
+                    .date.t-right: span Sep 2012 - Jun 2016
+                  .description
+                    span.-bold Bachelor - Computer Science 
+                    p.t-justified Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, reprehenderit, non. Delectus tempora voluptas maxime dolore expedita enim ducimus perferendis, minima laborum voluptates et, nam quas iusto dolorum distinctio velit.
+                
+                li.exp-item
+                  .info
+                    .name
+                      span.-bold Brain Academy
+                      span
+                        i.fa.fa-map-marker  
+                        span.location Kiev, Ukraine
+                    .date.t-right: span Nov 2015 - Apr 2016
+                  .description
+                    span.-bold Front-End Development 
+                    p.t-justified Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, reprehenderit, non. Delectus tempora voluptas maxime dolore expedita enim ducimus perferendis, minima laborum voluptates et, nam quas iusto dolorum distinctio velit.
+                
+            .section-career
+              h2.sub-title Career 
+              ul.exp-list
+                li.exp-item
+                  .info
+                    .name
+                      span.-bold Bumeen Group
+                      span
+                        i.fa.fa-map-marker  
+                        span.location Kiev, Ukraine
+                    .date.t-right: span May 2016 - Present
+                  .description
+                    span.-bold Junior Front-End Developer 
+                    p.t-justified Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, reprehenderit, non. Delectus tempora voluptas maxime dolore expedita enim ducimus perferendis, minima laborum voluptates et, nam quas iusto dolorum distinctio velit.      
+      section#skills
+        .container-small
+          .title: h2 Skills & Tools
+          .content
+            div
+              ul.skills-list
+                li.skill-item
+                  .skill-name: span HTML(5)
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                li.skill-item
+                  .skill-name: span CSS(3)
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                li.skill-item
+                  .skill-name: span JavaScript
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span TypeScript
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span jQuery
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span Twitter Bootstrap
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span SASS
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span Less
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span Jade
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span AngularJS
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                    i.fa.fa-circle-o
+            div
+              ul.skills-list
+                li.skill-item
+                  .skill-name: span JSON
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                li.skill-item
+                  .skill-name: span MVC Pattern
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span SPA Approach
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span Object Oriented Programming
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span GIT / GIT Flow
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span WebStorm
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span Command Line
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span Adobe Photoshop
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span BEM
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                    i.fa.fa-circle-o
+                    i.fa.fa-circle-o
+                li.skill-item
+                  .skill-name: span Java
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                    i.fa.fa-circle-o
+                    i.fa.fa-circle-o
+                    i.fa.fa-circle-o
+          .lang
+            h2.sub-title.t-left Languages 
+            .lang-wrap
+              div
+                ul.skills-list
+                  li.skill-item
+                    .skill-name: span Ukrainian (Mother Tongue)
+                    .skill-score
+                      i.fa.fa-circle
+                      i.fa.fa-circle
+                      i.fa.fa-circle
+                      i.fa.fa-circle
+                      i.fa.fa-circle
+                  li.skill-item
+                    .skill-name: span English (Upper Intermediate)
+                    .skill-score
+                      i.fa.fa-circle
+                      i.fa.fa-circle
+                      i.fa.fa-circle
+                      i.fa.fa-circle
+                      i.fa.fa-circle-o
+              div
+                ul.skills-list
+                  li.skill-item
+                    .skill-name: span Russian (Fluent)
+                    .skill-score
+                      i.fa.fa-circle
+                      i.fa.fa-circle
+                      i.fa.fa-circle
+                      i.fa.fa-circle
+                      i.fa.fa-circle
+                  li.skill-item
+                    .skill-name: span German (Basics)
+                    .skill-score
+                      i.fa.fa-circle
+                      i.fa.fa-circle-o
+                      i.fa.fa-circle-o
+                      i.fa.fa-circle-o
+                      i.fa.fa-circle-o
+      section#projects
+        .container
+          .title: h2 Projects
+          .content
+            .project-row
+              .project-item
+                .project
+              .project-item
+                .project
+              .project-item
+                .project
+            .action-row.t-center
+              button.button(type="button") See More
+      footer#contact
+        .container-small
+          .title: h2 Contact
+          .content
+            div
+              ul.contact-list
+                li.contact-item
+                  .icon
+                    i.fa.fa-facebook-square
+                  .link
+                    a(href="#") http://facebook.com
+                li.contact-item
+                  .icon
+                    i.fa.fa-facebook-square
+                  .link
+                    a(href="#") http://facebook.com
+            div
+              ul.contact-list
+                li.contact-item
+                  .icon
+                    i.fa.fa-linkedin-square
+                  .link
+                    a(href="#") http://facebook.com
+                li.contact-item
+                  .icon
+                    i.fa.fa-at
+                  .link
+                    a(href="mailto:maxim.lysenko94@gmail.com") maxim.lysenko94@gmail.com
+        .copy.t-center
+          span Copyright 
+            i.fa.fa-copyright  
+            |  Maxim Lysenko | 2016
     // JavaScript
     script(src="dest/vendor/jquery-1.12.4.min.js")
-    script(src="dest/vendor/bootstrap.min.js")
     script(src="dest/js/main.min.js")

@@ -1,17 +1,59 @@
-@import url(https://fonts.googleapis.com/css?family=Jura)
+@import url('https://fonts.googleapis.com/css?family=Jura')
 
 $border-color: #ccc
 $main-color: #e83d47
+$bg-color: #f2f1ed
+
+@function em($pixels)
+  @return #{$pixels / 16}em
 
 body
   font-family: 'Jura', sans-serif
-  font-size: 15px
+  font-size: 1em
 a
   color: #333
   &:hover, &:focus
     color: #333
     outline: none
     text-decoration: none
+
+ul
+  padding: 0
+  margin: 0
+  li
+    list-style-type: none
+button.button
+  background-color: $main-color
+  color: #fff
+  padding: em(8) em(25)
+  outline: none
+  border: none
+  cursor: pointer
+  opacity: .8
+  transition: opacity .15s ease-in-out
+  &:hover
+    opacity: 1
+
+.container
+  width: 1170px
+  margin: 0 auto
+.container-small
+  width: 810px
+  margin: 0 auto
+
+.sub-title
+  font-size: 1.5em
+  text-align: center
+.t-left
+  text-align: left
+.t-right
+  text-align: right
+.t-center
+  text-align: center
+.t-justified
+  text-align: justify
+.-bold
+  font-weight: bold
 
 header.header
   position: relative
@@ -54,12 +96,16 @@ header.header
     justify-content: center
 
     h1
-      font-size: 55px
+      font-size: em(55)
+      margin: em(10) 0 0
+      display: inline-block
+      padding-bottom: em(8)
+      border-bottom: 1px solid #fff
 
     p
-      font-size: 30px
+      font-size: em(30)
       text-align: center
-
+      margin-top: em(10)
 
   .overlay
     position: absolute
@@ -75,7 +121,7 @@ header.header
     background-color: #fff
     bottom: 0
     color: $main-color
-    font-size: 40px
+    font-size: em(45)
     height: 50px
     left: 50%
     margin-left: -50px
@@ -112,11 +158,184 @@ header.header
   span
     display: block
     transition: transform .2s ease-in-out
-    
+
 .bio
-  height: 2000px
+  padding-top: 80px
+  padding-bottom: em(50)
+
+  .about, .detailed
+    width: 45%
+
+  .about p
+    text-align: justify
+
+  p
+    font-size: em(17)
+    line-height: 1.5
+
+  .bio-list
+    li:not(:last-child)
+      margin-bottom: em(10)
+    span
+      display: block
+      margin-bottom: em(5)
 
 
+section, footer
+  .title
+    text-align: center
+    color: $main-color
+
+    h2
+      font-size: em(45)
+
+  .content
+    margin-top: em(50)
+    border-top: 1px solid $border-color
+    display: flex
+    justify-content: space-between
+
+#experience
+  padding: em(50) 0 em(90)
+  background-color: $bg-color
+
+  .content
+    padding-top: em(25)
+    & > div
+      width: 50%
+      padding-left: em(30)
+      &:first-child
+        border-right: 1px solid $border-color
+        padding-right: em(30)
+        padding-left: 0
+
+.exp-list
+  margin-top: em(40)
+  .exp-item
+    &:not(:last-child)
+      margin-bottom: em(50)
+
+.info
+  display: flex
+  & > div
+    width: 50%
+
+  span
+    display: block
+  i
+    color: $main-color
+
+  .name
+    span:first-child
+      font-size: 1.2em
+      margin-bottom: em(5)
+  .date
+    span
+      line-height: 1.5
+
+  .location
+    display: inline-block
+    margin-left: 5px
+
+.description
+  margin-top: em(20)
+  span
+    font-size: 1.2em
+  p
+    font-size: em(17)
+    line-height: 1.5
+    margin-top: em(5)
+
+#skills
+  padding: em(50) 0 em(90)
+
+  .content
+    padding-top: em(25)
+    & > div
+      width: 45%
+
+  .skill-item
+    display: flex
+    justify-content: space-between
+    padding: em(8) 0
+    & > div
+      display: inline-block
+    i
+      color: $main-color
+      font-size: em(14)
+      transition: all .3s ease-in-out
+      &:not(:last-child)
+        margin-right: 2px
+    &:not(:last-child)
+      margin-bottom: em(5)
+    &:hover
+      background-color: $bg-color
+      i:not(:last-child)
+        margin-right: 5px
+  .lang
+    margin-top: em(35)
+  .lang-wrap
+    display: flex
+    justify-content: space-between
+    & > div
+      width: 45%
+#projects
+  background-color: $bg-color
+  padding: em(50) 0 em(90)
+
+  .content
+    padding-top: em(50)
+    display: block
+  .project-row
+    display: flex
+    justify-content: space-between
+  .action-row
+    margin-top: em(50)
+  .project-item
+    width: 30%
+    background-color: #fff
+    height: 300px
+    padding: em(20)
+    box-sizing: border-box
+  .project
+    width: 100%
+    height: 100%
+    background-color: $bg-color
+
+#contact
+  background-color: #434242
+  color: #fff
+  padding: em(50) 0 0
+  .content
+    padding-top: em(50)
+    padding-bottom: em(50)
+    border-bottom: 1px solid $border-color
+    & > div
+      width: 45%
+  h2
+    color: #fff
+
+  .contact-item
+    display: flex
+    align-items: center
+    color: $border-color
+    &:not(:last-child)
+      margin-bottom: em(20)
+    &:hover
+      color: #fff
+      a
+        color: #fff !important
+    .icon
+      font-size: em(30)
+    .link
+      margin-left: em(20)
+      font-size: em(17)
+      a
+        color: $border-color
+        text-decoration: none
+.copy
+  padding-bottom: em(20)
+  margin-top: em(150)
 @keyframes bounce
   0%
     transform: translateY(0)
