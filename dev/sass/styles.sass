@@ -13,8 +13,80 @@ a
     outline: none
     text-decoration: none
 
-.header
-  // border-bottom: 1px solid $border-color
+header.header
+  position: relative
+  height: 100vh
+  background: url('../images/bg-img.jpg') no-repeat center fixed
+  background-size: cover
+
+  .content
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 4
+    position: relative
+    width: 70%
+    height: 100%
+    margin: 0 auto
+
+    .img-wrap
+      width: 300px
+      height: 300px
+      border-radius: 50%
+      padding: 15px
+      background-color: #fff
+
+    .img
+      background: url('../images/for_main.png') no-repeat center
+      background-size: cover
+      border-radius: 50%
+      height: 100%
+
+  .hello-block
+    display: flex
+    justify-content: space-between
+    width: 100%
+    color: #fff
+
+  .title
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    h1
+      font-size: 55px
+
+    p
+      font-size: 30px
+      text-align: center
+
+
+  .overlay
+    position: absolute
+    background: $main-color
+    opacity: .6
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 2
+
+  .arrow-wrap
+    background-color: #fff
+    bottom: 0
+    color: $main-color
+    font-size: 40px
+    height: 50px
+    left: 50%
+    margin-left: -50px
+    position: absolute
+    text-align: center
+    width: 100px
+    z-index: 4
+
+    i
+      cursor: pointer
+      animation: bounce 1.5s ease-in-out infinite
 
 .nav-list
   padding: 0
@@ -40,22 +112,19 @@ a
   span
     display: block
     transition: transform .2s ease-in-out
-
-section.top
-  position: relative
-  height: 100vh
-  background: url('../images/bg-img.jpg') no-repeat center fixed
-  background-size: cover
-
-  .overlay
-    position: absolute
-    background: $main-color
-    opacity: .6
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    z-index: 2
-
+    
 .bio
   height: 2000px
+
+
+@keyframes bounce
+  0%
+    transform: translateY(0)
+  20%
+    transform: translateY(3px)
+  40%
+    transform: translateY(-2px)
+  60%
+    transform: translateY(2px)
+  80%, 100%
+    transform: translateY(0)
