@@ -17,11 +17,29 @@
   </head>
   <body>
     <div class="page-wrap">
-      <header class="header">
+      <nav role="navigation" class="nav-bar">
+        <div class="logo"><a href="#header"><span>Max<span class="-bold">Lysenko</span></span></a></div>
+        <div class="nav">
+          <ul class="nav-list clearfix">
+            <li class="item"><a href="#bio" class="nav-link"><span>bio</span></a></li>
+            <li class="item"><a href="#experience" class="nav-link"><span>experience</span></a></li>
+            <li class="item"><a href="#skills" class="nav-link"><span>skills & tools</span></a></li>
+            <li class="item"><a href="#projects" class="nav-link"><span>projects</span></a></li>
+            <li class="item"><a href="#contact" class="nav-link"><span>contact</span></a></li>
+          </ul>
+        </div>
+      </nav>
+      <header id="header">
         <div class="content">
           <div class="hello-block">
             <div class="img-wrap">
               <div class="img"></div>
+              <div class="loading">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 206" preserveAspectRatio="none" class="hourglass">
+                  <path d="M120 0H0v206h120V0zM77.1 133.2C87.5 140.9 92 145 92 152.6V178H28v-25.4c0-7.6 4.5-11.7 14.9-19.4 6-4.5 13-9.6 17.1-17 4.1 7.4 11.1 12.6 17.1 17zM60 89.7c-4.1-7.3-11.1-12.5-17.1-17C32.5 65.1 28 61 28 53.4V28h64v25.4c0 7.6-4.5 11.7-14.9 19.4-6 4.4-13 9.6-17.1 16.9z" class="middle"></path>
+                  <path d="M93.7 95.3c10.5-7.7 26.3-19.4 26.3-41.9V0H0v53.4c0 22.5 15.8 34.2 26.3 41.9 3 2.2 7.9 5.8 9 7.7-1.1 1.9-6 5.5-9 7.7C15.8 118.4 0 130.1 0 152.6V206h120v-53.4c0-22.5-15.8-34.2-26.3-41.9-3-2.2-7.9-5.8-9-7.7 1.1-2 6-5.5 9-7.7zM70.6 103c0 18 35.4 21.8 35.4 49.6V192H14v-39.4c0-27.9 35.4-31.6 35.4-49.6S14 81.2 14 53.4V14h92v39.4C106 81.2 70.6 85 70.6 103z" class="outer"></path>
+                </svg>
+              </div>
             </div>
             <div class="title">
               <h1>Front-End Developer</h1>
@@ -30,7 +48,7 @@
           </div>
         </div>
         <div class="overlay"></div>
-        <div class="arrow-wrap"><i class="fa fa-angle-down"></i></div>
+        <div class="arrow-wrap"><a href="#bio"><i class="fa fa-angle-down"></i></a></div>
       </header>
       <section id="bio" class="bio">
         <div class="container-small">
@@ -256,26 +274,18 @@
           <div class="content">
             <div>
               <ul class="contact-list">
-                <li class="contact-item">
-                  <div class="icon"><i class="fa fa-facebook-square"></i></div>
-                  <div class="link"><a href="#">http://facebook.com</a></div>
-                </li>
-                <li class="contact-item">
-                  <div class="icon"><i class="fa fa-facebook-square"></i></div>
-                  <div class="link"><a href="#">http://facebook.com</a></div>
-                </li>
+                <li class="contact-item"><a href="https://www.facebook.com/l.max1m" target="_blank" class="item-link">
+                    <div class="item-icon"><i class="fa fa-facebook-square"></i></div><span>https://www.facebook.com/l.max1m </span></a></li>
+                <li class="contact-item"><a href="skype:max123281?userinfo" class="item-link">
+                    <div class="item-icon"><i class="fa fa-skype"></i></div><span>max123281</span></a></li>
               </ul>
             </div>
-            <div>
+            <div class="right">
               <ul class="contact-list">
-                <li class="contact-item">
-                  <div class="icon"><i class="fa fa-linkedin-square"></i></div>
-                  <div class="link"><a href="#">http://facebook.com</a></div>
-                </li>
-                <li class="contact-item">
-                  <div class="icon"><i class="fa fa-at"></i></div>
-                  <div class="link"><a href="mailto:maxim.lysenko94@gmail.com">maxim.lysenko94@gmail.com</a></div>
-                </li>
+                <li class="contact-item"><a href="https://www.linkedin.com/in/maksym-lysenko-381415b7" target="_blank" class="item-link">
+                    <div class="item-icon"><i class="fa fa-linkedin-square"></i></div><span>https://www.linkedin.com/in/maksym-lysenko</span></a></li>
+                <li class="contact-item"><a href="mailto:maxim.lysenko94@gmail.com" class="item-link">
+                    <div class="item-icon"><i class="fa fa-at"></i></div><span>maxim.lysenko94@gmail.com</span></a></li>
               </ul>
             </div>
           </div>
