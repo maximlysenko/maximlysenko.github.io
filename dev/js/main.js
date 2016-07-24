@@ -10,11 +10,8 @@ $(document).ready(function() {
 
   setupScroll();
   setupAnchors();
-
-
-  // var imgUrl = $img.css('background-image').slice(4, $img.css('background-image').length - 1);
+  
   var url = '../dest/images/for_main.png';
-  // console.log(imgUrl);
 
   $('<img/>').attr('src', url).on('load', function() {
     console.debug('loaded');
