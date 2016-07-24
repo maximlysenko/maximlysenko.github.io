@@ -185,6 +185,8 @@ button.button
       font-size: em(38)
       margin-left: -40px
       width: 80px
+    @media only screen and (max-width:400px)
+      display: none
 
     a
       color: $main-color
@@ -294,9 +296,12 @@ nav.nav-bar
 #experience
   padding: em(50) 0 em(90)
   background-color: $bg-color
+  @media only screen and (max-width:400px)
+    padding-bottom: em(50)
 
   .content
     padding-top: em(25)
+    box-sizing: border-box
     & > div
       width: 50%
       padding-left: em(30)
@@ -317,6 +322,9 @@ nav.nav-bar
       margin: 0 auto
     @media only screen and (max-width:900px)
       width: 80%
+    @media only screen and (max-width:400px)
+      width: 100%
+      padding: 0 em(20)
 
 .exp-list
   margin-top: em(40)
@@ -392,6 +400,8 @@ nav.nav-bar
         margin-right: 5px
   .lang
     margin-top: em(35)
+    @media only screen and (max-width:400px)
+      padding: 0 em(20)
   .lang-wrap
     display: flex
     justify-content: space-between
@@ -402,8 +412,6 @@ nav.nav-bar
     @media only screen and (max-width:850px)
       justify-content: unset
       flex-direction: column
-    @media only screen and (max-width:400px)
-      padding: 0 em(20)
 
 #projects
   background-color: $bg-color
