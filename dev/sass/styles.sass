@@ -360,6 +360,7 @@ nav.nav-bar
 
   .content
     padding-top: em(25)
+    box-sizing: border-box
     & > div
       width: 45%
       @media only screen and (max-width:850px)
@@ -368,6 +369,8 @@ nav.nav-bar
       flex-direction: column
       justify-content: unset
       width: 100%
+    @media only screen and (max-width:400px)
+      padding: 0 em(10)
 
   .skill-item
     display: flex
