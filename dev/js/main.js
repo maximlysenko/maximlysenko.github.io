@@ -5,13 +5,22 @@ $(document).ready(function() {
     $bio:         $('#bio'),
     $img:         $('header .img'),
     $anchorLinks: $('a[href*="#"]:not([href="#"])'),
-    $loadSpinner: $('.loading')
+    $loadSpinner: $('.loading'),
+    $docBtn:      $('#doc'),
+    $pdfBtn:      $('#pdf'),
+    $cvButtons:   $('.download button')
   };
 
   setupScroll();
   setupAnchors();
-  
-  var url = '../dest/images/for_main.png';
+
+  var url = '../dest/images/for_main.png',
+    docUrl = '';
+
+  elements.$docBtn.data('link', '../../test.txt');
+  elements.$docBtn.on('click', function() {
+    window.location.href = $(this).data('link');
+  });
 
   $('<img/>').attr('src', url).on('load', function() {
     console.debug('loaded');

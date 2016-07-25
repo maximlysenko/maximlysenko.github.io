@@ -520,9 +520,23 @@ nav.nav-bar
         font-size: em(12)
         display: none
 
+  .download
+    padding: em(100) 0 0
+    button
+      background-color: $border-color
+      color: #434242
+      padding: em(10) em(25)
+      border: none
+      outline: none
+      cursor: pointer
+      &:not(:last-child)
+        margin-right: em(20)
+      &:hover
+        background-color: #fff
+
 .copy
   padding-bottom: em(20)
-  margin-top: em(200)
+  margin-top: em(100)
   @media only screen and (max-width:850px)
     margin-top: em(150)
   @media only screen and (max-width:400px)
