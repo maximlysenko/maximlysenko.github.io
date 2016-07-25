@@ -42,6 +42,10 @@ $(document).ready(function() {
         elements.$navBar.addClass('shown');
       } else {
         elements.$navBar.removeClass('shown');
+        if (elements.$mobileNav.hasClass('opened')) {
+          elements.$mobileNav.removeClass('opened');
+          elements.$toggleMenu.removeClass('opened');
+        }
       }
     });
   }

@@ -232,9 +232,15 @@ nav.nav-bar
   width: 100%
   z-index: 9
   transition: top .3s ease-in-out
+  @media only screen and (max-width:850px)
+    justify-content: space-between
 
   &.shown
     top: 0
+
+  .logo
+    @media only screen and (max-width:850px)
+      margin-left: em(30)
 
 .nav
   @media only screen and (max-width:850px)
@@ -285,6 +291,9 @@ nav.nav-bar
       display: block
       float: none
       text-align: center
+  .nav-link
+    padding-top: 5px
+    padding-bottom: 15px
 .mobile-nav.opened
   opacity: 1
   transform: translateY(0)
@@ -296,6 +305,7 @@ nav.nav-bar
   height: 50px
   align-items: center
   cursor: pointer
+  margin-right: em(30)
   @media only screen and (max-width:850px)
     display: flex
 
@@ -308,7 +318,7 @@ nav.nav-bar
     width: 100%
     background: #434242
     position: relative
-    transition: transform .3s ease-in-out
+    transition: all .3s ease-in-out
 
   span:before
     top: 10px
