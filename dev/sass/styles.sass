@@ -522,6 +522,9 @@ nav.nav-bar
 
   .download
     padding: em(100) 0 0
+    @media only screen (max-width: 400px)
+      display: flex
+      align-items: center
     button
       background-color: $border-color
       color: #434242
@@ -533,6 +536,9 @@ nav.nav-bar
         margin-right: em(20)
       &:hover
         background-color: #fff
+      @media only screen (max-width: 400px)
+        display: block
+        margin-bottom: em(15)
 
 .copy
   padding-bottom: em(20)
