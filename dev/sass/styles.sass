@@ -233,7 +233,8 @@ nav.nav-bar
   z-index: 9
   transition: top .3s ease-in-out
   @media only screen and (max-width:850px)
-    justify-content: space-between
+    display: block
+
 
   &.shown
     top: 0
@@ -241,6 +242,9 @@ nav.nav-bar
   .logo
     @media only screen and (max-width:850px)
       margin-left: em(30)
+      float: left
+    a
+      line-height: 50px
 
 .nav
   @media only screen and (max-width:850px)
@@ -308,6 +312,7 @@ nav.nav-bar
   margin-right: em(30)
   @media only screen and (max-width:850px)
     display: flex
+    float: right
 
   span,
   span:before,
