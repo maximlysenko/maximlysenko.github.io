@@ -17,7 +17,7 @@ $(document).ready(function() {
   var url = '../dest/images/for_main.png',
     docUrl = '';
 
-  elements.$docBtn.data('link', '../../test.txt');
+  elements.$docBtn.data('link', '../../CV/test.doc');
   elements.$docBtn.on('click', function() {
     window.location.href = $(this).data('link');
   });
