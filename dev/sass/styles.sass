@@ -48,7 +48,7 @@ button.button
   @media only screen and (max-width:850px)
     width: 100%
     padding: em(15)
-  @media only screen and (max-width:400px)
+  @media only screen and (max-width:450px)
     padding: 0
 
 .sub-title
@@ -70,7 +70,7 @@ button.button
   height: 100vh
   background: url('../images/bg-img.jpg') no-repeat center fixed
   background-size: cover
-  @media only screen and (max-width:400px)
+  @media only screen and (max-width:450px)
     background-attachment: scroll
 
   .content
@@ -101,7 +101,7 @@ button.button
         height: 200px
       @media only screen and (max-width:780px)
         margin: 0 auto
-      @media only screen and (max-width:400px)
+      @media only screen and (max-width:450px)
         width: 150px
         height: 150px
 
@@ -187,7 +187,7 @@ button.button
       font-size: em(38)
       margin-left: -40px
       width: 80px
-    @media only screen and (max-width:400px)
+    @media only screen and (max-width:450px)
       display: none
 
     a
@@ -211,7 +211,7 @@ section, footer
 
     h2
       font-size: em(45)
-      @media only screen and (max-width:400px)
+      @media only screen and (max-width:450px)
         font-size: em(30)
 
   .content
@@ -232,11 +232,13 @@ nav.nav-bar
   width: 100%
   z-index: 9
   transition: top .3s ease-in-out
-  @media only screen and (max-width:400px)
-    display: none
 
   &.shown
     top: 0
+
+.nav
+  @media only screen and (max-width:850px)
+    display: none
 
 .nav-list
   padding: 0
@@ -264,6 +266,67 @@ nav.nav-bar
   span
     display: block
     transition: transform .2s ease-in-out
+
+.mobile-nav
+  position: absolute
+  width: 100%
+  top: 50px
+  left: 0
+  background: #fff
+  transform: translateY(-200%)
+  opacity: 0
+  transition: all .5s ease-in-out
+  box-shadow: 0px 3px 4px rgba(0,0,0,.1)
+  ul.nav-list
+    list-style-type: none
+    margin: 0
+    padding: 0
+    li.item
+      display: block
+      float: none
+      text-align: center
+.mobile-nav.opened
+  opacity: 1
+  transform: translateY(0)
+
+
+.mobile-nav-toggle
+  display: none
+  width: 30px
+  height: 50px
+  align-items: center
+  cursor: pointer
+  @media only screen and (max-width:850px)
+    display: flex
+
+  span,
+  span:before,
+  span:after
+    content: ''
+    display: block
+    height: 2px
+    width: 100%
+    background: #434242
+    position: relative
+    transition: transform .3s ease-in-out
+
+  span:before
+    top: 10px
+  span:after
+    top: -12px
+
+  &.opened span
+    background: transparent
+
+  &.opened span:before,
+  &.opened span:after
+    transform-origin: center
+    transform: rotate(45deg)
+    top: 0
+
+  &.opened span:before
+    transform: rotate(-45deg)
+    top: 1px
 
 #bio
   padding-top: em(50)
@@ -298,7 +361,7 @@ nav.nav-bar
 #experience
   padding: em(50) 0 em(90)
   background-color: $bg-color
-  @media only screen and (max-width:400px)
+  @media only screen and (max-width:450px)
     padding-bottom: em(50)
 
   .content
@@ -324,7 +387,7 @@ nav.nav-bar
       margin: 0 auto
     @media only screen and (max-width:900px)
       width: 80%
-    @media only screen and (max-width:400px)
+    @media only screen and (max-width:450px)
       width: 100%
       padding: 0 em(20)
 
@@ -379,7 +442,7 @@ nav.nav-bar
       flex-direction: column
       justify-content: unset
       width: 100%
-    @media only screen and (max-width:400px)
+    @media only screen and (max-width:450px)
       padding: 0 em(20)
 
   .skill-item
@@ -402,7 +465,7 @@ nav.nav-bar
         margin-right: 5px
   .lang
     margin-top: em(35)
-    @media only screen and (max-width:400px)
+    @media only screen and (max-width:450px)
       padding: 0 em(20)
   .lang-wrap
     display: flex
@@ -418,7 +481,7 @@ nav.nav-bar
 #projects
   background-color: $bg-color
   padding: em(50) 0 em(90)
-  @media only screen and (max-width: 400px)
+  @media only screen and (max-width:450px)
     padding-bottom: em(50)
 
   .content
@@ -449,7 +512,7 @@ nav.nav-bar
       height: 300px
       &:not(:last-child)
         margin-bottom: em(30)
-    @media only screen and (max-width:400px)
+    @media only screen and (max-width:450px)
       width: 90%
       height: 250px
   .project
@@ -472,7 +535,7 @@ nav.nav-bar
         margin: 0 auto
         &:not(:last-child)
           margin-bottom: em(30)
-      @media only screen and (max-width:400px)
+      @media only screen and (max-width:450px)
         width: 90%
         display: flex
         justify-content: center
@@ -480,12 +543,12 @@ nav.nav-bar
       width: 50%
       @media only screen and (max-width:850px)
         margin: 0 auto
-      @media only screen and (max-width:400px)
+      @media only screen and (max-width:450px)
         width: 90%
     @media only screen and (max-width:850px)
       justify-content: unset
       flex-direction: column
-    @media only screen and (max-width:400px)
+    @media only screen and (max-width:450px)
       padding-bottom: em(20)
       padding-top: em(20)
   h2
@@ -495,7 +558,7 @@ nav.nav-bar
     color: $border-color
     &:not(:last-child)
       margin-bottom: em(20)
-    @media only screen and (max-width:400px)
+    @media only screen and (max-width:450px)
       display: inline-block
       &:not(:last-child)
         margin-bottom: 0
@@ -512,17 +575,17 @@ nav.nav-bar
     .item-icon
       font-size: em(30)
       margin-right: em(10)
-      @media only screen and (max-width:400px)
+      @media only screen and (max-width:450px)
         margin-right: 0
 
     span
-      @media only screen and (max-width:400px)
+      @media only screen and (max-width:450px)
         font-size: em(12)
         display: none
 
   .download
     padding-top: em(100)
-    @media only screen and (max-width: 400px)
+    @media only screen and (max-width:450px)
       display: flex
       flex-direction: column
       align-items: center
@@ -540,7 +603,7 @@ nav.nav-bar
         margin-right: em(20)
       &:hover
         background-color: #fff
-      @media only screen and (max-width: 400px)
+      @media only screen and (max-width:450px)
         display: block
         margin-bottom: em(15)
         &:not(:last-child)
@@ -551,7 +614,7 @@ nav.nav-bar
   margin-top: em(100)
   @media only screen and (max-width:850px)
     margin-top: em(150)
-  @media only screen and (max-width:400px)
+  @media only screen and (max-width:450px)
     margin-top: em(50)
     font-size: em(10)
 

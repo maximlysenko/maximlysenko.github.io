@@ -1,3 +1,11 @@
+mixin nav()
+  ul.nav-list.clearfix
+    li.item: a.nav-link(href="#bio"): span bio
+    li.item: a.nav-link(href="#experience"): span experience
+    li.item: a.nav-link(href="#skills"): span skills & tools
+    li.item: a.nav-link(href="#projects"): span projects
+    li.item: a.nav-link(href="#contact"): span contact
+
 doctype html
 html(lang="en")
   head
@@ -22,12 +30,10 @@ html(lang="en")
             span Max
               span.-bold Lysenko
         .nav
-          ul.nav-list.clearfix
-            li.item: a.nav-link(href="#bio"): span bio
-            li.item: a.nav-link(href="#experience"): span experience
-            li.item: a.nav-link(href="#skills"): span skills & tools
-            li.item: a.nav-link(href="#projects"): span projects
-            li.item: a.nav-link(href="#contact"): span contact
+          +nav()
+        .mobile-nav-toggle: span
+        .mobile-nav
+          +nav()
       header#header
         .content
           .hello-block

@@ -7,7 +7,9 @@ $(document).ready(function() {
     $anchorLinks: $('a[href*="#"]:not([href="#"])'),
     $loadSpinner: $('.loading'),
     $docBtn:      $('#doc'),
-    $pdfBtn:      $('#pdf')
+    $pdfBtn:      $('#pdf'),
+    $toggleMenu:  $('.mobile-nav-toggle'),
+    $mobileNav:   $('.mobile-nav')
   };
 
   setupScroll();
@@ -20,6 +22,10 @@ $(document).ready(function() {
   });
   elements.$docBtn.on('click', function() {
     window.location.href = '../../CV/Junior_Front-end_CV_Maksym_Lysenko.docx';
+  });
+  elements.$toggleMenu.on('click', function() {
+    $(this).toggleClass('opened');
+    elements.$mobileNav.toggleClass('opened');
   });
 
   $('<img/>').attr('src', url).on('load', function() {
