@@ -521,10 +521,11 @@ nav.nav-bar
         display: none
 
   .download
-    padding: em(100) 0 0
+    padding-top: em(100)
     @media only screen (max-width: 400px)
       display: flex
       align-items: center
+      padding-top: em(50)
     button
       background-color: $border-color
       color: #434242
@@ -539,6 +540,8 @@ nav.nav-bar
       @media only screen (max-width: 400px)
         display: block
         margin-bottom: em(15)
+        &:not(:last-child)
+          margin-right: 0
 
 .copy
   padding-bottom: em(20)
