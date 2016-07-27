@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Hangman">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Angular -->
+    <script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+
+    <!-- App -->
+    <script src="app/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/controllers/mainController.js"></script>
+
+    <!-- Directives -->
+    <script src="app/directives/button.js"></script>
+    <script src="app/directives/hideWord.js"></script>
+    <script src="app/directives/guessWord.js"></script>
+    <script src="app/directives/drawGame.js"></script>
+
+    <!-- Services -->
+    <script src="app/services/Letters.js"></script>
+    <script src="app/services/Words.js"></script>
+    <script src="app/services/canvasControl.js"></script>
+
+</head>
+<body ng-controller="mainController">
+    <div class="page-wrap">
+        <div class="container">
+            <header class="title">
+                <h1>Hangman</h1>
+            </header>
+            <section class="main">
+                <div class="control">
+                    <button class="button" type="button" ng-click="startNewGame()">New Game</button>
+                </div>
+                <div class="paint" draw-game></div>
+                <div class="info">
+                    <div class="word"><span hide-word guess-word>{{control.word}}</span></div>
+                    <div class="left"><span class="name">Tries left: </span><span>{{control.triesLeft}}</span></div>
+                    <div class="wrong">
+                        <span class="name">Mistakes: </span>
+                        <ul>
+                            <li ng-repeat="mistake in control.wrongLetters">{{mistake}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="letters">
+                <div class="letters-row">
+                    <div button class="letter" ng-repeat="letter in letters | orderBy: 'order' | filter: {row: 1}"><span>{{letter.letter}}</span></div>
+                </div>
+                <div class="letters-row">
+                    <div button class="letter" ng-repeat="letter in letters | orderBy: 'order' | filter: {row: 2}"><span>{{letter.letter}}</span></div>
+                </div>
+                <div class="letters-row">
+                    <div button class="letter" ng-repeat="letter in letters | orderBy: 'order' | filter: {row: 3}"><span>{{letter.letter}}</span></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="resultModal" ng-class="{'shown': control.lose || control.win}">
+        <div class="content" ng-class="{'shown': control.lose || control.win}">
+            <h1 ng-if="control.win">You win :) !</h1>
+            <h1 ng-if="control.lose">You lose :( !</h1>
+            <button class="button" type="button" ng-click="startNewGame()">New Game</button>
+        </div>
+    </div>
+</body>
+</html>
