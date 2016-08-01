@@ -51,9 +51,9 @@ $(document).ready(function() {
           elements.$toggleMenu.removeClass('opened');
         }
 
-        elements.$helloBlock.css({
-          'transform': 'translate(0px, '+ wScroll / 2.5 +'px)'
-        });
+        // elements.$helloBlock.css({
+        //   'transform': 'translate(0px, '+ wScroll / 2.5 +'px)'
+        // });
       }
 
 
