@@ -9,7 +9,8 @@ $(document).ready(function() {
     $docBtn:      $('#doc'),
     $pdfBtn:      $('#pdf'),
     $toggleMenu:  $('.mobile-nav-toggle'),
-    $mobileNav:   $('.mobile-nav')
+    $mobileNav:   $('.mobile-nav'),
+    $helloBlock:  $('.hello-block')
   };
 
   setupScroll();
@@ -38,7 +39,10 @@ $(document).ready(function() {
 
   function setupScroll() {
     $(window).on('scroll', function() {
-      if ($(this).scrollTop() > elements.$bio.offset().top - parseInt(elements.$navBar.outerHeight())) {
+
+      var wScroll = $(this).scrollTop();
+
+      if (wScroll > elements.$bio.offset().top - parseInt(elements.$navBar.outerHeight())) {
         elements.$navBar.addClass('shown');
       } else {
         elements.$navBar.removeClass('shown');
@@ -46,7 +50,13 @@ $(document).ready(function() {
           elements.$mobileNav.removeClass('opened');
           elements.$toggleMenu.removeClass('opened');
         }
+
+        elements.$helloBlock.css({
+          'transform': 'translate(0px, '+ wScroll / 2.5 +'px)'
+        });
       }
+
+
     });
   }
 

@@ -75,14 +75,15 @@ button.button
     background-attachment: scroll
 
   .content
-    display: flex
-    justify-content: center
     align-items: center
-    z-index: 4
+    display: flex
+    height: 100%
+    justify-content: center
+    margin: 0 auto
+    overflow: hidden
     position: relative
     width: 70%
-    height: 100%
-    margin: 0 auto
+    z-index: 4
     @media only screen and (max-width:1275px)
       width: 80%
 
@@ -534,11 +535,54 @@ nav.nav-bar
     background-size: cover
     background-repeat: no-repeat
     background-color: $bg-color
+    cursor: pointer
+    position: relative
+    &:hover .project-about
+      opacity: 1
+    &:hover a.more, &:hover .description
+      opacity: 1
+      transform: translateX(0)
 
   .project.game
     background-image: url('../images/Hangman-game.png')
     background-size: 100%
     background-position-y: 50%
+
+  .project-about
+    align-items: center
+    background-color: rgba(232,61,71, .9)
+    color: #ffffff
+    display: flex
+    flex-direction: column
+    height: 100%
+    justify-content: center
+    left: 0
+    opacity: 0
+    position: absolute
+    top: 0
+    transition: all .3s ease-in-out
+    width: 100%
+
+    .description
+      margin: 0 auto
+      opacity: 0
+      text-align: center
+      transform: translateX(-100px)
+      transition: all .3s ease-in-out
+      width: 60%
+
+    a.more
+      background-color: transparent
+      border: 2px solid #ffffff
+      color: #ffffff
+      margin-top: 25px
+      opacity: 0
+      padding: 5px 25px
+      transform: translateX(100px)
+      transition: transform .3s ease-in-out, opacity .3s ease-in-out
+      &:hover
+        background-color: #ffffff
+        color: #000000
 
 #contact
   background-color: #434242
@@ -637,6 +681,12 @@ nav.nav-bar
   @media only screen and (max-width:450px)
     margin-top: em(50)
     font-size: em(10)
+
+  .author
+    color: #fff
+    cursor: default
+    &:hover
+      text-decoration: underline
 
 @keyframes appear-top
   from

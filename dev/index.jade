@@ -91,7 +91,9 @@ html(lang="en")
                     .date.t-right: span Sep 2012 - Jun 2016
                   .description
                     span.-bold Bachelor - Computer Science 
-                    p.t-justified Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, reprehenderit, non. Delectus tempora voluptas maxime dolore expedita enim ducimus perferendis, minima laborum voluptates et, nam quas iusto dolorum distinctio velit.
+                    p.t-justified At the University I've learned basics of Java programming, 
+                      | creating UML diagrams, the importance of OOP, SQL,
+                      | and basics of web development: HTML, CSS, JavaScript. 
                 
                 li.exp-item
                   .info
@@ -103,7 +105,11 @@ html(lang="en")
                     .date.t-right: span Nov 2015 - Apr 2016
                   .description
                     span.-bold Front-End Development 
-                    p.t-justified Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, reprehenderit, non. Delectus tempora voluptas maxime dolore expedita enim ducimus perferendis, minima laborum voluptates et, nam quas iusto dolorum distinctio velit.
+                    p.t-justified Here I've learned Front-end from very beginning. 
+                      | HTML5, CSS3, CSS framework - Twitter Bootstrap, CSS preprocessor - Less, native JavaScript. 
+                      | Also I've learned about OOP in JavaScript, 
+                      | MVC approach and process of creating SPA with native JavaScript.
+                      | The final project of this course was creating a Web-site using technologies we've learned.
                 
             .section-career
               h2.sub-title Career 
@@ -115,10 +121,15 @@ html(lang="en")
                       span
                         i.fa.fa-map-marker  
                         span.location Kiev, Ukraine
-                    .date.t-right: span May 2016 - Present
+                    .date.t-right: span May 2016 - Aug 2016
                   .description
                     span.-bold Junior Front-End Developer 
-                    p.t-justified Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, reprehenderit, non. Delectus tempora voluptas maxime dolore expedita enim ducimus perferendis, minima laborum voluptates et, nam quas iusto dolorum distinctio velit.      
+                    p.t-justified First working experience as Front-end Developer. 
+                      | My responsibilities were: assisting in creating SPA with 
+                      | AngularJS (creating custom directives for extra functionality, parsing and displaying data, 
+                      | that comes from the server), fixing HTML markup, 
+                      | adding CSS3 animation and mostly adding JavaScript 
+                      | logic to the complete HTML markup.
       section#skills
         .container-small
           .title: h2 Skills & Tools
@@ -150,14 +161,6 @@ html(lang="en")
                     i.fa.fa-circle
                     i.fa.fa-circle-o
                 li.skill-item
-                  .skill-name: span TypeScript
-                  .skill-score
-                    i.fa.fa-circle
-                    i.fa.fa-circle
-                    i.fa.fa-circle
-                    i.fa.fa-circle
-                    i.fa.fa-circle-o
-                li.skill-item
                   .skill-name: span jQuery
                   .skill-score
                     i.fa.fa-circle
@@ -174,12 +177,20 @@ html(lang="en")
                     i.fa.fa-circle
                     i.fa.fa-circle-o
                 li.skill-item
+                  .skill-name: span TypeScript
+                  .skill-score
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle
+                    i.fa.fa-circle-o
+                    i.fa.fa-circle-o
+                li.skill-item
                   .skill-name: span SASS
                   .skill-score
                     i.fa.fa-circle
                     i.fa.fa-circle
                     i.fa.fa-circle
-                    i.fa.fa-circle
+                    i.fa.fa-circle-o
                     i.fa.fa-circle-o
                 li.skill-item
                   .skill-name: span Less
@@ -187,7 +198,7 @@ html(lang="en")
                     i.fa.fa-circle
                     i.fa.fa-circle
                     i.fa.fa-circle
-                    i.fa.fa-circle
+                    i.fa.fa-circle-o
                     i.fa.fa-circle-o
                 li.skill-item
                   .skill-name: span Jade
@@ -195,7 +206,7 @@ html(lang="en")
                     i.fa.fa-circle
                     i.fa.fa-circle
                     i.fa.fa-circle
-                    i.fa.fa-circle
+                    i.fa.fa-circle-o
                     i.fa.fa-circle-o
                 li.skill-item
                   .skill-name: span AngularJS
@@ -232,7 +243,7 @@ html(lang="en")
                     i.fa.fa-circle
                     i.fa.fa-circle-o
                 li.skill-item
-                  .skill-name: span Object Oriented Programming
+                  .skill-name: span OOP
                   .skill-score
                     i.fa.fa-circle
                     i.fa.fa-circle
@@ -326,17 +337,26 @@ html(lang="en")
                       i.fa.fa-circle-o
                       i.fa.fa-circle-o
                       i.fa.fa-circle-o
-      section#projects
+      section#projects 
         .container
           .title: h2 Projects
           .content
             .project-row
               .project-item
-                a(href="Hangman/"): .project.game
+                .project.game
+                  .project-about
+                    .description: p Pretty Hangman game on AngularJS
+                    a(href="Hangman/").more Play
               .project-item
                 .project
+                  .project-about
+                    .description: p 
+                    a(href="").more More
               .project-item
                 .project
+                  .project-about
+                    .description: p 
+                    a(href="").more More
             .action-row.t-center
               button.button(type="button") See More
       footer#contact
@@ -372,8 +392,10 @@ html(lang="en")
             button(type="button", id="pdf") Download CV.pdf
         .copy.t-center
           span Copyright 
-            i.fa.fa-copyright  
-            |  Maxim Lysenko | 2016
+            i.fa.fa-copyright
+            |  Developed by 
+            span.author Maxim Lysenko 
+            | | 2016
     // JavaScript
     script(src="dest/vendor/jquery-1.12.4.min.js")
     script(src="dest/js/main.min.js")
