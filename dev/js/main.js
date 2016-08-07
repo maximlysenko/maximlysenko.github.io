@@ -19,10 +19,10 @@ $(document).ready(function() {
   var url = '../dest/images/for_main.png';
 
   elements.$pdfBtn.on('click', function() {
-    window.location.href = '../../CV/Junior_Front-end_CV_Maksym_Lysenko.pdf';
+    window.location.href = '../../CV/Front-end_CV_Maxim_Lysenko.pdf';
   });
   elements.$docBtn.on('click', function() {
-    window.location.href = '../../CV/Junior_Front-end_CV_Maksym_Lysenko.docx';
+    window.location.href = '../../CV/Front-end_CV_Maxim_Lysenko.docx';
   });
   elements.$toggleMenu.on('click', function() {
     $(this).toggleClass('opened');
